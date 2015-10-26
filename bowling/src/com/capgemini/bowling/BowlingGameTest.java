@@ -10,7 +10,7 @@ public class BowlingGameTest {
 	BowlingGameResultCalculator score = new BowlingGame();
 
 	@Test
-	public void test01() {
+	public void test_1_round() {
 		// given
 		int[] actualThrows = { 1, 2, };
 		// when
@@ -23,7 +23,7 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test02() {
+	public void test_2_rounds_with_spare() {
 		// given
 		int[] actualThrows = { 5, 5, 3 };
 		// when
@@ -36,7 +36,7 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test03() {
+	public void test_2_rounds_with_strike() {
 		// given
 		int[] actualThrows = { 10, 0, 3, 2 };
 		// when
@@ -49,10 +49,9 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test() {
+	public void test_10_rounds() {
 		// given
-		int[] actualThrows = { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
-				1, 2, 1, 2 };
+		int[] actualThrows = { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2 };
 		// when
 		for (int actualThrow : actualThrows) {
 			score.roll(actualThrow);
@@ -63,10 +62,9 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test1() {
+	public void test_10_rounds_with_spare() {
 		// given
-		int[] actualThrows = { 5, 5, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
-				1, 2, 1, 2 };
+		int[] actualThrows = { 5, 5, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2 };
 		// when
 		for (int actualThrow : actualThrows) {
 			score.roll(actualThrow);
@@ -77,10 +75,9 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test2() {
+	public void test_10_rounds_with_spare_inside() {
 		// given
-		int[] actualThrows = { 1, 2, 1, 2, 1, 2, 8, 2, 1, 2, 1, 2, 1, 2, 1, 2,
-				1, 2, 1, 2 };
+		int[] actualThrows = { 1, 2, 1, 2, 1, 2, 8, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2 };
 		// when
 		for (int actualThrow : actualThrows) {
 			score.roll(actualThrow);
@@ -91,10 +88,9 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test3() {
+	public void test_10_rounds_with_strike() {
 		// given
-		int[] actualThrows = { 10, 0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
-				1, 2, 1, 2 };
+		int[] actualThrows = { 10, 0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2 };
 		// when
 		for (int actualThrow : actualThrows) {
 			score.roll(actualThrow);
@@ -105,10 +101,9 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test4() {
+	public void test_10_rounds_random_value_20_rolls() {
 		// given
-		int[] actualThrows = { 7, 2, 10, 0, 8, 2, 5, 3, 10, 0, 3, 1, 9, 0, 7,
-				3, 5, 5, 8, 1 };
+		int[] actualThrows = { 7, 2, 10, 0, 8, 2, 5, 3, 10, 0, 3, 1, 9, 0, 7, 3, 5, 5, 8, 1 };
 		// when
 		for (int actualThrow : actualThrows) {
 			score.roll(actualThrow);
@@ -119,10 +114,9 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test5() {
+	public void test_10_rounds_random_value_21_rolls_with_last_spare_8_2() {
 		// given
-		int[] actualThrows = { 7, 2, 10, 0, 8, 2, 5, 3, 10, 0, 3, 1, 9, 0, 7,
-				3, 5, 5, 8, 2, 8 };
+		int[] actualThrows = { 7, 2, 10, 0, 8, 2, 5, 3, 10, 0, 3, 1, 9, 0, 7, 3, 5, 5, 8, 2, 8 };
 		// when
 		for (int actualThrow : actualThrows) {
 			score.roll(actualThrow);
@@ -133,10 +127,9 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test6() {
+	public void test_10_rounds_random_value_21_rolls_with_last_spare_5_5() {
 		// given
-		int[] actualThrows = { 8, 1, 2, 3, 4, 6, 8, 1, 10, 0, 6, 1, 9, 1, 10,
-				0, 10, 0, 5, 5, 9 };
+		int[] actualThrows = { 8, 1, 2, 3, 4, 6, 8, 1, 10, 0, 6, 1, 9, 1, 10, 0, 10, 0, 5, 5, 9 };
 		// when
 		for (int actualThrow : actualThrows) {
 			score.roll(actualThrow);
@@ -147,7 +140,7 @@ public class BowlingGameTest {
 	}
 
 	@Test
-	public void test7() {
+	public void test_10_rounds_random_value_21_rolls_with_strike() {
 		// given
 		int[] actualThrows = { 8, 1, 2, 3, 4, 6, 8, 1, 10, 0, 6, 1, 9, 1, 10, 0, 10, 0, 10, 0, 9 };
 		// when
@@ -158,6 +151,5 @@ public class BowlingGameTest {
 		// then
 		Assert.assertEquals(153, result);
 	}
-
 
 }

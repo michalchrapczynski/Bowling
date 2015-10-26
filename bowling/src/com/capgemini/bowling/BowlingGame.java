@@ -18,6 +18,10 @@ public class BowlingGame implements BowlingGameResultCalculator {
 
 	private void checkAddPoints() {
 		listAbsolutScore.addAll(listScore);
+		if (listScore.size() > 19) {
+			finish = true;
+		}
+
 		for (int i = 2; i < listScore.size(); i++) {
 
 			if (i % 2 == 0 && listScore.get(i - 2) == 10) {
@@ -48,6 +52,15 @@ public class BowlingGame implements BowlingGameResultCalculator {
 	@Override
 	public int score() {
 		checkAddPoints();
+
+		if (isFinished()) {
+			System.out.println("Gra zostala zakonczona");
+			System.out.println();
+		} else {
+			System.out.println("Gra nie zostala zakonczona");
+			System.out.println();
+		}
+
 		for (Integer r : listAbsolutScore) {
 			absoluteScore += r;
 		}
